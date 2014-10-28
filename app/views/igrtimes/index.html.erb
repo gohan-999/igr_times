@@ -1,2 +1,32 @@
 <h1>IGR TIMES</h1>
-<%= @times %>
+<br>
+<br>
+<table>
+    <tr><td>下り</td></tr>
+    <% @kudari_times.each_with_index do |time, i| %>
+        <tr>
+            <td>
+                <%= time[0].to_s + " " %>
+            </td>
+            <td>
+                <%= time[1].to_s + "" %>
+            </td>
+        </tr>
+        <% break if i >= 2 %>
+    <% end %>
+</table>
+<br />
+<table>
+    <tr><td>上り</td></tr>
+    <% @nobori_times.each_with_index do |time, i| %>
+        <tr>
+            <td>
+                <%= time[0].to_s + " " %>
+            </td>
+            <td>
+                <%= time[1].to_s + "" %>
+            </td>
+        </tr>
+        <% break if i >= 2 %>
+    <% end %>
+</table>
